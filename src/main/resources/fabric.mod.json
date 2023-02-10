@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "babric-skin-fix",
+  "version": "${version}",
+  "name": "Babric Skin Fix",
+  "description": "Makes skins work again on Beta 1.7.3.",
+  "authors": [
+    "Allink"
+  ],
+  "contact": {
+    "homepage": "https://github.com/TheDeus-Group/babric-skin-fix",
+    "sources": "https://github.com/TheDeus-Group/babric-skin-fix",
+    "issues": "https://github.com/TheDeus-Group/babric-skin-fix/issues"
+  },
+  "license": "UNLICENSE",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "me.allinkdev.skinfix.SkinFix"
+    ]
+  },
+  "mixins": [
+    "babric-skin-fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}
