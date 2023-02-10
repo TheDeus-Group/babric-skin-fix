@@ -75,7 +75,6 @@ public class SkinFixerThread extends Thread {
 
         if (cape == null) {
             LOGGER.info("{} does not have a cape, skipping!", username);
-            return;
         } else {
             final String capeUrl = cape.getUrl();
 
