@@ -24,8 +24,18 @@ public class SkinFixerThread extends Thread {
 
     @Override
     public void run() {
-        final String username = target.name;
+        final String username;
 
+        while (target.name == null) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                LOGGER.error("Got interrupted while we were waiting for player username to become defined!", e);
+                this.interrupt();
+            }
+        }
+
+        username = target.name;
         LOGGER.info("Fixing skin of {}!", username);
         final UUIDRequest request = new UUIDRequest(username);
 
